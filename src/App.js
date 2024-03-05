@@ -3,6 +3,8 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import PropTypes from 'prop-types'
 import TextForm from './Components/TextForm';
+import Word_counter from './Components/Word_counter';
+
 
 function App() {
   return (
@@ -12,6 +14,7 @@ function App() {
       <div className="container my-3">
         <TextForm />
       </div>
+      <Word_counter/>
       
     </>
    
