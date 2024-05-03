@@ -82,7 +82,7 @@ nav li {
   display: inline-block;
   margin-left: 60px;
 }
-
+ 
 nav a {
   color:black;
   text-decoration: none;
@@ -91,8 +91,8 @@ nav a {
 }
 
 nav a:hover {
-  color:black;
-  background-color: yellow;
+  background-color: rgb(255, 208, 0);
   text-decoration: underline;
+  color: black;
 
 }
