@@ -15,6 +15,23 @@ export default function TextForm(props) {
     let newText = text.toLowerCase();
     setText(newText)
   }
+  const handleCapitalize = () => {
+    console.log("Capitalize was clicked ");
+    let newText = text.charAt(0).toUpperCase() + text.slice(1);
+    setText(newText)
+  }
+  const handleCopy = () => {
+    console.log("Copy was clicked ");
+    var newText = document.getElementById("FormControl");
+    newText.select();
+    navigator.clipboard.writeText(newText.value);
+  }
+  const handleClear = () => {
+    console.log("Clear was clicked ");  
+    let newText = '';
+    setText(newText)
+  }
+
   const [text, setText] = useState('Enter text here');
   return (
     <>
@@ -23,8 +40,11 @@ export default function TextForm(props) {
           <h1>Enter your text</h1>
           <textarea className="form-control" value={text} onChange={handleOnChange} id="FormControl" rows="5"></textarea>
         </div>
-        <button className="btn btn-primary" onClick={handleUpClick}>UpperCase</button>
-        <button className="btn btn-primary mx-2" onClick={handleLowClick}>LowerCase</button>
+        <button className="btn btn-primary" onClick={handleUpClick}>UPPERCASE</button>
+        <button className="btn btn-primary mx-2" onClick={handleLowClick}>lowercase</button>
+        <button className="btn btn-primary mx-2" onClick={handleCapitalize}>Capitalize</button>
+        <button className="btn btn-primary mx-2" onClick={handleCopy}>Copy to Clipboard</button>
+        <button className="btn btn-primary mx-2" onClick={handleClear}>Clear</button>
       </div>
       <div className="container my-3">
         <h2>Your Text Summary</h2>
