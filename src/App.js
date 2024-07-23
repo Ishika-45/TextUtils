@@ -14,8 +14,6 @@ import {
   Link
 } from "react-router-dom";
 
-
-
 function App() {
   const [mode, setMode] = useState('light');
   const [alert, setAlert] = useState(null);
